@@ -1,11 +1,13 @@
-
+import Home from './Pages/home.jsx';
 
 function App() {
 
 
   return (
     <>
-      <div>MAin</div>
+      <div>
+          <Home/>
+      </div>
     </>
   )
 }
