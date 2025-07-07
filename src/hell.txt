@@ -1,0 +1,34 @@
+import { useEffect, useState } from "react";
+
+export default function Navbar() {
+  const [showNavbar, setShowNavbar] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY) {
+        setShowNavbar(false); // Scrolling down → hide navbar
+      } else {
+        setShowNavbar(true); // Scrolling up → show navbar
+      }
+
+      setLastScrollY(currentScrollY); // Update last scroll position
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
+
+  return (
+    <nav
+      className={`fixed top-0 left-0 w-full bg-white shadow transition-transform duration-300 z-50 ${
+        showNavbar ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
+      <div className="p-4 text-xl font-bold text-center">My Navbar</div>
+    </nav>
+  );
+}
