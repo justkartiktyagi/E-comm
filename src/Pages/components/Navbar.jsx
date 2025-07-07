@@ -36,7 +36,7 @@ function Navbar() {
                             <li>Services</li>
                         </ul>
                     </div>
-                    <div className="space-x-4">
+                    <div className="space-x-7">
                         <button>Search</button>
                         <button>Bag</button>
                     </div>
