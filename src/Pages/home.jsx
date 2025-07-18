@@ -90,6 +90,32 @@ function Home() {
         }
     ];
 
+    const images_3=[
+        {
+            id:1,
+            src:"../../public/girl-8373900_1280.jpg",
+            caption1:"Lobortis Elementum Nibhtellus Molestie Mauris",
+            caption2:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore…",
+            caption4:"In Lifestyle / On December 24, 2021"
+        },
+        {
+            id:2,
+            src:"../../public/girls-1853958_1280.jpg",
+            caption1:"Condimentum Odvenenatis Vestibulum Dapibus",
+            caption2:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore…",
+            caption4:"In Lifestyle / On December 24, 2021"
+
+
+        },
+        {
+            id:3,
+            src:"../../public/young-woman-4266712_1280.jpg",
+            caption1:"Accumsan Tortor Posuere Acut Consequat",
+            caption2:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore…",
+            caption4:"In Lifestyle / On December 24, 2021"
+        }
+    ]
+
     return (
         <>
             <Navbar/>
@@ -105,7 +131,7 @@ function Home() {
                     </button>
 
                 </div>
-                <div className="h-80 w-full grid grid-cols-4 items-center container mx-auto  text-center">
+                <div className="h-80 w-full grid grid-cols-4 items-center bg-gray-300 text-center">
                     {images.map((image) => (
                         <div key={image.id} className="text-center">
                             <div className="justify-center flex">
@@ -177,6 +203,34 @@ function Home() {
                             <img className="h-260 w-200" src="../../public/Lozan.jpg" alt="HEadimage"></img>
 
                         </div>
+                    </div>
+                </div>
+                <div className="bg-white w-full h-300">
+                    <h2 className="text-center font-ubuntu text-xl text-black pt-10">Check out popular products</h2>
+                    <h1 className="text-center font-ubuntu text-5xl text-black pt-10">Popular Products</h1>
+                    <div className="container mx-auto gap-8 content-center justify-center pt-40 flex flex-wrap grid-cols-3">
+                    {images_3.map((image3)=> (
+
+
+
+                        <div className="max-w-md justify-center content-center   ">
+                            <a href="#">
+                                <img className=" h-80 w-full " src={image3.src} alt=""/>
+                            </a>
+                            <div className="p-5">
+                                <a href="#">
+                                    <h5 className="mb-2 text-2xl font-bold tracking-tight font-ubuntu text-black">{image3.caption1}</h5>
+                                </a>
+                                <p className="mb-3 font-normal  dark:text-gray-400">{image3.caption2}</p>
+                                <a href="#">
+                                    <h5 className="mb-3 font-normal font-ubuntu text-sm dark:text-gray-400">{image3.caption4}</h5>
+                                </a>
+                            </div>
+                        </div>
+
+
+
+                    ))}
                     </div>
                 </div>
             </div>
