@@ -69,15 +69,23 @@ function Home() {
         {
             id:1,
             src:"../../public/Dönme dolap _Texting (Tamamlandı).jpg",
+            caption1:"461 Articles",
+            caption2:"Jackets",
         },
         {
             id:2,
             src:"../../public/Spring AI Bags Collection.jpg",
+            caption1:"289 articles",
+            caption2:"Sweaters",
+
 
         },
         {
             id:3,
             src:"../../public/Qunel_com.jpg",
+            caption1:"345 articles",
+            caption2:"Accessories"
+
 
         }
     ];
@@ -97,18 +105,18 @@ function Home() {
                     </button>
 
                 </div>
-                <div className="bg-gray-300">
-                    <div className="h-50 w-full grid grid-cols-4 items-center container mx-auto  text-center">
-                        {images.map((image) => (
-                            <div key={image.id} className="text-center">
-                                <div className="justify-center flex">
-                                    <img className="h-15 w-15" src={image.src} alt={image.caption1}></img>
-                                </div>
-                                <p className="text-2xl mt-5 font-bold">{image.caption1}</p>
-                                <p className="text-m ">{image.caption2}</p>
+                <div className="h-80 w-full grid grid-cols-4 items-center container mx-auto  text-center">
+                    {images.map((image) => (
+                        <div key={image.id} className="text-center">
+                            <div className="justify-center flex">
+                                <img className="h-15 w-15" src={image.src} alt={image.caption1}></img>
                             </div>
-                        ))}
-                    </div>
+                            <p className="text-2xl mt-5 font-bold">{image.caption1}</p>
+                            <p className="text-m ">{image.caption2}</p>
+                        </div>
+                    ))}
+                </div>
+                <div className="bg-gray-300">
                 </div>
                 <div className="bg-white w-full h-200 ">
                     <div className="container mx-auto">
@@ -139,13 +147,36 @@ function Home() {
                         </div>
                     </div>
                 </div>
-                <div className="container mx-auto  bg-transparent h-200 w-full  " >
-                    <div className=" container mx-auto grid grid-cols-3 pt-50">
+                <div className="container mx-auto  bg-transparent h-200 w-full py-10  " >
+                    <div className=" container mx-auto grid grid-cols-3 flex-wrap justify-center w-full  place-items-center pt-50">
                         {images_2.map((image_2)=>(
-                            <div className=" flex justify-center ">
-                            <img  className="h-120 w-100" src={image_2.src} alt=""/>
+                            <div className=" flex relative w-100 h-126 ">
+                            <img  className="w-full h-full " src={image_2.src} alt=""/>
+                                <div className="absolute bottom-0 w-80 h-30 bg-black  text-white p-4">
+                                    <p className="text-white font-ubuntu  text-sm">{image_2.caption1}</p>
+                                    <h2 className="text-white text-3xl font-bold font-ubuntu ">{image_2.caption2}</h2>
+                                </div>
                             </div>
                         ))}
+                    </div>
+                </div>
+                <div className="bg-white w-full h-300">
+                    <div className="container mx-auto pl-30 pt-20 flex ">
+                        <div className="bg-black absolute h-160 w-150 mt-60">
+                            <div className="text-center flex justify-center items-center">
+                            <div className="  bg-transparent items-center  h-100 w-100 mt-20">
+                            <h1 className="text-white font-ubuntu text-left text-5xl">New Clothes technologies</h1>
+                            <p className="text-white font-ubuntu text-xl font-light text-left mt-10">Mauris vitae ultricies leo integer <br></br> malesuada.</p>
+                            <p className="text-white font-ubuntu text-xl font-light text-left ">Odio tempor orci dapibus ultrices in.<br></br>  Egestas diam in arcu cursus euismod.<br></br>  Dictum purus viverra accumsan in nisl.<br></br>  Tempor id eu</p>
+                                <img className="h-60 w-60  " src="../../public/9eebe3656ce9480b941a34e2ed54bb37-removebg-preview.png" alt="signature"></img>
+                            </div>
+                            </div>
+
+                        </div>
+                        <div className="ml-110">
+                            <img className="h-260 w-200" src="../../public/Lozan.jpg" alt="HEadimage"></img>
+
+                        </div>
                     </div>
                 </div>
             </div>
