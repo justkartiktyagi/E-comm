@@ -72,12 +72,12 @@ function Home() {
         },
         {
             id:2,
-            src:"../../public/Spring AI Bags Collection.jpg"
+            src:"../../public/Spring AI Bags Collection.jpg",
 
         },
         {
             id:3,
-            src:"../../public/Qunel_com.jpg"
+            src:"../../public/Qunel_com.jpg",
 
         }
     ];
