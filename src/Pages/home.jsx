@@ -65,13 +65,29 @@ function Home() {
 
 
     ];
+    const images_2=[
+        {
+            id:1,
+            src:"../../public/Dönme dolap _Texting (Tamamlandı).jpg",
+        },
+        {
+            id:2,
+            src:"../../public/Spring AI Bags Collection.jpg"
+
+        },
+        {
+            id:3,
+            src:"../../public/Qunel_com.jpg"
+
+        }
+    ];
 
     return (
         <>
             <Navbar/>
             <div>
                 <div className="relative w-full container mx-auto">
-                    <img className="h-200  w-full"
+                    <img className="h-200 w-full"
                          src="../../public/Black Red Minimalist Fashion Product Introduction Landscape Banner.png"
                          alt="Banner Image"/>
 
@@ -121,6 +137,15 @@ function Home() {
                                 </div>
                             ))}
                         </div>
+                    </div>
+                </div>
+                <div className="container mx-auto  bg-transparent h-200 w-full  " >
+                    <div className=" container mx-auto grid grid-cols-3 pt-50">
+                        {images_2.map((image_2)=>(
+                            <div className=" flex justify-center ">
+                            <img  className="h-120 w-100" src={image_2.src} alt=""/>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>
