@@ -1,4 +1,5 @@
 import Navbar from "./components/Navbar.jsx";
+import Footer from "./components/Footer.jsx";
 
 function Home() {
 
@@ -113,8 +114,13 @@ function Home() {
             caption1:"Accumsan Tortor Posuere Acut Consequat",
             caption2:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore…",
             caption4:"In Lifestyle / On December 24, 2021"
-        }
+        },
+
+
     ]
+
+
+
 
     return (
         <>
@@ -205,7 +211,7 @@ function Home() {
                         </div>
                     </div>
                 </div>
-                <div className="bg-white w-full h-300">
+                <div className="bg-white w-full h-240">
                     <h2 className="text-center font-ubuntu text-xl text-black pt-10">Check out popular products</h2>
                     <h1 className="text-center font-ubuntu text-5xl text-black pt-10">Popular Products</h1>
                     <div className="container mx-auto gap-8 content-center justify-center pt-40 flex flex-wrap grid-cols-3">
@@ -233,6 +239,25 @@ function Home() {
                     ))}
                     </div>
                 </div>
+                <div className="bg-white h-150  w-full">
+                    <div className="container relative mx-auto justify-center flex  ">
+                        <img className=" h-120 w-300 " src="../../public/pexels-christian-heitz-285904-842711.jpg"
+                             alt="newsletter"></img>
+                        <p className="absolute pt-30 text-5xl font-ubuntu text-white font-bold">Newsletter Updates</p>
+                        <p className="absolute pt-50 text-3xl font-ubuntu text-white ">Subscribe to receive emails on
+                            new product arrivals & special offers</p>
+                        <div className="absolute pt-70 pr-60">
+
+                            <input type="text" id="first_name"
+                                   className="bg-white text-xl w-100 p-3.5 dark:text-black "
+                                   placeholder="Email" required/>
+                        </div>
+                        <div className="absolute pt-70 pl-100">
+                        <button type="Submit" className="text-white h-15  bg-red-600  focus:ring-4 focus:outline-none focus:ring-blue-300 font-ubuntu text-sm w-55 px-0 py-2.5 text-center ">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+                <Footer/>
             </div>
         </>
     )
