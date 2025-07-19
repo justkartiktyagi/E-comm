@@ -1,5 +1,4 @@
-import Navbar from "./components/Navbar.jsx";
-import Footer from "./components/Footer.jsx";
+
 
 function Home() {
 
@@ -124,7 +123,7 @@ function Home() {
 
     return (
         <>
-            <Navbar/>
+
             <div>
                 <div className="relative w-full container mx-auto">
                     <img className="h-200 w-full"
@@ -144,7 +143,7 @@ function Home() {
 
                         <div key={image.id} className="text-center">
                             <div className="justify-center flex">
-                                <img className="h-15 w-15" src={image.src} alt={image.caption1}></img>
+                                <img  className="h-15 w-15" src={image.src} alt={image.caption1}></img>
                             </div>
                             <p className="text-2xl mt-5 font-bold">{image.caption1}</p>
                             <p className="text-m ">{image.caption2}</p>
@@ -166,7 +165,7 @@ function Home() {
                                 <div>
                                     <div
                                         className="bg-gray-100 h-80 w-80 flex justify-center items-center ">
-                                        <img className=" h-50 w-50"
+                                        <img key={catalog.id}  className=" h-50 w-50"
                                              src={catalog.src} alt={catalog.caption1}></img>
 
                                     </div>
@@ -188,7 +187,8 @@ function Home() {
                     <div className=" container mx-auto grid grid-cols-3 flex-wrap justify-center w-full  place-items-center pt-50">
                         {images_2.map((image_2)=>(
                             <div className=" flex relative w-100 h-126 ">
-                            <img  className="w-full h-full " src={image_2.src} alt=""/>
+
+                            <img  className="w-full h-full " key={image_2.id} src={image_2.src} alt=""/>
                                 <div className="absolute bottom-0 w-80 h-30 bg-black  text-white p-4">
                                     <p className="text-white font-ubuntu  text-sm">{image_2.caption1}</p>
                                     <h2 className="text-white text-3xl font-bold font-ubuntu ">{image_2.caption2}</h2>
@@ -226,7 +226,7 @@ function Home() {
 
                         <div className="max-w-md justify-center content-center   ">
                             <a href="#">
-                                <img className=" h-80 w-full " src={image3.src} alt=""/>
+                                <img className=" h-80 w-full " key={image3.id}  src={image3.src} alt=""/>
                             </a>
                             <div className="p-5">
                                 <a href="#">
@@ -259,7 +259,7 @@ function Home() {
                         </div>
                     </div>
                 </div>
-                <Footer/>
+
             </div>
         </>
     )

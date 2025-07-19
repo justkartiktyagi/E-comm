@@ -1,5 +1,6 @@
 import React from "react";
 import '/src/index.css'
+import {Link} from "react-router-dom";
 
 function Navbar() {
 
@@ -30,14 +31,14 @@ function Navbar() {
                     <div className=" flex text-center">
                         <ul className="flex font-medium  font-ubuntu space-x-15 ">
                             <a href="#">
-                                <li>Home</li>
+                                <Link to="/"><li>Home</li></Link>
                             </a>
                             <a href="#">
                                 <li>About Us</li>
                             </a>
-                            <a href="#">
-                                <li>Products</li>
-                            </a>
+
+                                <Link to="/product_list"><li>Products</li></Link>
+
                             <a href="#">
                                 <li>Contact Us</li>
                             </a>
