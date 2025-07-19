@@ -137,8 +137,11 @@ function Home() {
                     </button>
 
                 </div>
-                <div className="h-80 w-full grid grid-cols-4 items-center bg-gray-300 text-center">
+                <div className="bg-gray-300">
+                <div className="h-80 w-full grid grid-cols-4 items-center container mx-auto  text-center">
+
                     {images.map((image) => (
+
                         <div key={image.id} className="text-center">
                             <div className="justify-center flex">
                                 <img className="h-15 w-15" src={image.src} alt={image.caption1}></img>
@@ -146,7 +149,9 @@ function Home() {
                             <p className="text-2xl mt-5 font-bold">{image.caption1}</p>
                             <p className="text-m ">{image.caption2}</p>
                         </div>
+
                     ))}
+                </div>
                 </div>
                 <div className="bg-gray-300">
                 </div>
@@ -233,9 +238,6 @@ function Home() {
                                 </a>
                             </div>
                         </div>
-
-
-
                     ))}
                     </div>
                 </div>
