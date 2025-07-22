@@ -1,7 +1,30 @@
-
-
+import {useEffect , useState} from "react";
+import axios from 'axios';
 
 function ProductList(){
+
+    const[Products , setProducts] = useState([])
+    const[Loading,setLoading] = useState (true)
+    const[error,setError]=useState(false)
+            //Use Effect Runs when component renders
+    useEffect(()=>{
+        axios
+            .get("https://api.escuelajs.co/api/v1/products")
+            .then(res=>{
+            setProducts(res.data);
+            console.log(res.data)
+            setLoading(false);
+        })
+
+        .catch(err=>{
+            console.log("Fetch Error: ", err)
+            setError("Failed To Load Products")
+            setLoading(false);
+        })
+
+        },[])
+    if(Loading) return <p>Loading....</p>;
+    if (error) return <p>{error}</p>;
 
     return(
         <div>

@@ -30,9 +30,9 @@ function Navbar() {
                     <a href="#"><p className="text-3xl font-ubuntu font-medium">DripCode</p></a>
                     <div className=" flex text-center">
                         <ul className="flex font-medium  font-ubuntu space-x-15 ">
-                            <a href="#">
+
                                 <Link to="/"><li>Home</li></Link>
-                            </a>
+
                             <a href="#">
                                 <li>About Us</li>
                             </a>
@@ -40,7 +40,7 @@ function Navbar() {
                                 <Link to="/product_list"><li>Products</li></Link>
 
                             <a href="#">
-                                <li>Contact Us</li>
+                               <Link to="/product_card"><li>Contact Us</li></Link>
                             </a>
                             <a href="#">
                                 <li>News</li>
