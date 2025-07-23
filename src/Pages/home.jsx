@@ -226,7 +226,7 @@ function Home() {
 
                         <div className="max-w-md justify-center content-center   ">
                             <a href="#">
-                                <img className=" h-80 w-full "   src={image3.src} alt=""/>
+                                <img className=" h-80 w-full " key={image3.id}  src={image3.src} alt=""/>
                             </a>
                             <div className="p-5">
                                 <a href="#">
