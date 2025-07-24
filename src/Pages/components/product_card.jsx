@@ -19,7 +19,8 @@ function Product_Card({image,title,price , category}){
                     </div>
                     <div className="justify-between items-center ml-3 mt-4">
                         <span className="text-lg font-bold mt-2 ml-2 text-green-600">{price}</span>
-                        <br></br>
+                        <br>
+                        </br>
                         <button className="bg-black text-white w-40 py-2 mt-2 ml-2 text-sm font-medium hover:bg-gray-800 transition">
                             Add To Cart
                         </button>
