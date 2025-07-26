@@ -197,7 +197,7 @@ function Home() {
                         ))}
                     </div>
                 </div>
-                <div className="bg-white w-full h-300">
+                <div className="bg-white w-full h-100">
                     <div className="container mx-auto pl-30 pt-20 flex ">
                         <div className="bg-black absolute h-160 w-150 mt-60">
                             <div className="text-center flex justify-center items-center">
