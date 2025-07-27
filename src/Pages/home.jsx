@@ -223,7 +223,7 @@ function Home() {
                                     <p className="text-sm leading-relaxed mb-3">Egestas diam in arcu cursus euismod.</p>
                                     <p className="text-sm leading-relaxed mb-3">Dictum purus viverra accumsan in nisl.</p>
                                     <p className="text-sm leading-relaxed mb-3">Tempor id eu</p>
-                                    <p className="font-cursive text-xl mt-100">Alice W</p>
+                                    <p className="font-cursive text-xl mt-40">Alice W</p>
                                 </div>
                             </div>
 
@@ -244,11 +244,11 @@ function Home() {
                     <h2 className="text-center font-ubuntu text-xl text-black pt-10">Check out popular products</h2>
                     <h1 className="text-center font-ubuntu text-5xl text-black pt-10">Popular Products</h1>
 
-                    <div className="container mx-auto gap-8 content-center justify-center pt-10 lg:pt-20 flex flex-wrap grid-cols-3">
+                    <div className="container mx-auto gap-8 content-center justify-center pt-10 lg:pt-10 flex flex-wrap grid-cols-3">
                         {images_3.map((image3) => (
                             <div key={image3.id} className="max-w-md justify-center content-center">
                                 <a href="#">
-                                    <img className="h-80 w-full" src={image3.src} alt="" />
+                                    <img className="h-80 w-full px-2" src={image3.src} alt="" />
                                 </a>
                                 <div className="p-5">
                                     <a href="#">
@@ -264,35 +264,38 @@ function Home() {
                     </div>
                 </div>
                 <div className="bg-white w-full py-16">
-                    <div className="relative container mx-auto flex flex-col lg:flex-row items-center justify-center gap-6 px-4">
+                    <div className="container mx-auto px-4">
+                        <div className="relative w-full max-w-4xl mx-auto overflow-hidden rounded-lg">
+                            {/* Background Image */}
+                            <img
+                                className="w-full h-100   object-cover"
+                                src="../../../public/pexels-christian-heitz-285904-842711.jpg"
+                                alt="newsletter"
+                            />
 
-                        {/* Background Image */}
-                        <img
-                            className="w-full max-w-4xl h-auto object-cover "
-                            src="../../public/pexels-christian-heitz-285904-842711.jpg"
-                            alt="newsletter"
-                        />
+                            {/* Overlay Content */}
+                            <div className="absolute inset-0 bg-opacity-50 flex flex-col items-center justify-center px-4 text-center">
+                                <h2 className="text-3xl md:text-5xl font-bold text-white font-ubuntu">
+                                    Newsletter Updates
+                                </h2>
+                                <p className="text-white text-base md:text-xl mt-4 font-ubuntu">
+                                    Subscribe to receive emails on new product arrivals & special offers
+                                </p>
 
-                        {/* Overlay Content */}
-                        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
-                            <h2 className="text-4xl md:text-5xl font-bold text-white font-ubuntu">Newsletter Updates</h2>
-                            <p className="text-white text-lg md:text-xl mt-4 font-ubuntu">
-                                Subscribe to receive emails on new product arrivals & special offers
-                            </p>
-
-                            {/* Input + Button */}
-                            <div className="flex flex-col pl-10 pr-10 md:flex-row items-center mt-6 w-full max-w-xl gap-4">
-                                <input
-                                    type="email"
-                                    placeholder="Enter your email"
-                                    className="w-full bg-white p-3  border-none text-black font-ubuntu"
-                                />
-                                <button
-                                    type="submit"
-                                    className="bg-red-600 text-white px-6 py-3  font-ubuntu hover:bg-red-700 transition"
-                                >
-                                    Subscribe
-                                </button>
+                                {/* Input + Button */}
+                                <div className="flex flex-col md:flex-row items-center mt-6 w-full max-w-xl gap-4">
+                                    <input
+                                        type="email"
+                                        placeholder="Enter your email"
+                                        className="w-full bg-white p-3 border-none text-black font-ubuntu"
+                                    />
+                                    <button
+                                        type="submit"
+                                        className="bg-red-600 text-white px-6 py-3 font-ubuntu hover:bg-red-700 transition"
+                                    >
+                                        Subscribe
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
