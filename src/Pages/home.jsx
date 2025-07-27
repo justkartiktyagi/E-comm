@@ -65,54 +65,54 @@ function Home() {
 
 
     ];
-    const images_2=[
+    const images_2 = [
         {
-            id:1,
-            src:"../../public/Dönme dolap _Texting (Tamamlandı).jpg",
-            caption1:"461 Articles",
-            caption2:"Jackets",
+            id: 1,
+            src: "../../public/Dönme dolap _Texting (Tamamlandı).jpg",
+            caption1: "461 Articles",
+            caption2: "Jackets",
         },
         {
-            id:2,
-            src:"../../public/Spring AI Bags Collection.jpg",
-            caption1:"289 articles",
-            caption2:"Sweaters",
+            id: 2,
+            src: "../../public/Spring AI Bags Collection.jpg",
+            caption1: "289 articles",
+            caption2: "Sweaters",
 
 
         },
         {
-            id:3,
-            src:"../../public/Qunel_com.jpg",
-            caption1:"345 articles",
-            caption2:"Accessories"
+            id: 3,
+            src: "../../public/Qunel_com.jpg",
+            caption1: "345 articles",
+            caption2: "Accessories"
 
 
         }
     ];
 
-    const images_3=[
+    const images_3 = [
         {
-            id:1,
-            src:"../../public/girl-8373900_1280.jpg",
-            caption1:"Lobortis Elementum Nibhtellus Molestie Mauris",
-            caption2:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore…",
-            caption4:"In Lifestyle / On December 24, 2021"
+            id: 1,
+            src: "../../public/girl-8373900_1280.jpg",
+            caption1: "Lobortis Elementum Nibhtellus Molestie Mauris",
+            caption2: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore…",
+            caption4: "In Lifestyle / On December 24, 2021"
         },
         {
-            id:2,
-            src:"../../public/girls-1853958_1280.jpg",
-            caption1:"Condimentum Odvenenatis Vestibulum Dapibus",
-            caption2:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore…",
-            caption4:"In Lifestyle / On December 24, 2021"
+            id: 2,
+            src: "../../public/girls-1853958_1280.jpg",
+            caption1: "Condimentum Odvenenatis Vestibulum Dapibus",
+            caption2: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore…",
+            caption4: "In Lifestyle / On December 24, 2021"
 
 
         },
         {
-            id:3,
-            src:"../../public/young-woman-4266712_1280.jpg",
-            caption1:"Accumsan Tortor Posuere Acut Consequat",
-            caption2:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore…",
-            caption4:"In Lifestyle / On December 24, 2021"
+            id: 3,
+            src: "../../public/young-woman-4266712_1280.jpg",
+            caption1: "Accumsan Tortor Posuere Acut Consequat",
+            caption2: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore…",
+            caption4: "In Lifestyle / On December 24, 2021"
         },
 
 
@@ -123,139 +123,177 @@ function Home() {
 
     return (
         <>
-
+            {/* max-w-screen-xl it uses bascally like a container max wisth 1280px */}
             <div>
-                <div className="relative w-full container mx-auto">
-                    <img className="h-200 w-full"
-                         src="../../public/Black Red Minimalist Fashion Product Introduction Landscape Banner.png"
-                         alt="Banner Image"/>
+                <div className="relative w-full max-w-screen-xl mx-auto">
+                    <img
+                        className="w-full h-auto object-cover"
+                        src="../../public/Black Red Minimalist Fashion Product Introduction Landscape Banner.png"
+                        alt="Banner Image"
+                    />
 
                     <button
-                        className=" absolute bottom-32 left-32 font-medium font-ubuntu text-xl bg-red-600  text-black py-5 px-7">
+                        className="absolute left-4 bottom-6 text-xs sm:text-sm md:text-base py-1 px-3 sm:py-2 sm:px-5 md:py-3 md:px-6 bg-red-600 lg:ml-5 text-black font-medium font-ubuntu">
                         Explore Now
                     </button>
-
                 </div>
+
                 <div className="bg-gray-300">
-                <div className="h-80 w-full grid grid-cols-4 items-center container mx-auto  text-center">
-
-                    {images.map((image) => (
-
-                        <div key={image.id} className="text-center">
-                            <div className="justify-center flex">
-                                <img  className="h-15 w-15" src={image.src} alt={image.caption1}></img>
+                    <div className="w-full container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-center text-center gap-6 px-4 py-8">
+                        {images.map((image) => (
+                            <div key={image.id} className="text-center">
+                                <div className="flex justify-center">
+                                    <img
+                                        className="h-10 w-10 sm:h-20 sm:w-20 md:h-24 md:w-24"
+                                        src={image.src}
+                                        alt={image.caption1}
+                                    />
+                                </div>
+                                <p className="text-md sm:text-xl mt-5 font-bold break-words">{image.caption1}</p>
+                                <p className="text-sm sm:text-base text-gray-700">{image.caption2}</p>
                             </div>
-                            <p className="text-2xl mt-5 font-bold">{image.caption1}</p>
-                            <p className="text-m ">{image.caption2}</p>
+                        ))}
+                    </div>
+                </div>
+                <div className="bg-gray-400">
+                </div>
+                <div className="bg-white w-full py-20">
+                    <div className="container mx-auto px-4 sm:px-8">
+                        {/* Heading */}
+                        <div className=" text-center">
+                            <p className="font-ubuntu font-bold text-sm sm:text-base">Checkout latest products</p>
+                            <p className="text-4xl sm:text-5xl lg:text-6xl font-ubuntu text-black">New Arrivals</p>
                         </div>
 
-                    ))}
-                </div>
-                </div>
-                <div className="bg-gray-300">
-                </div>
-                <div className="bg-white w-full h-200 ">
-                    <div className="container mx-auto">
-                        <div className="pl-20 pt-20">
-                            <p className="font-ubuntu font-bold">Checkout latest products</p>
-                            <p className="text-6xl font-ubuntu flex text-black ">New Arrivals</p>
-                        </div>
-                        <div className="pt-20 pl-20 grid grid-cols-4">
+                        {/* Product Grid */}
+                        <div className="pt-10 sm:pt-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
                             {catalogs.map((catalog) => (
-                                <div>
-                                    <div
-                                        className="bg-gray-100 h-80 w-80 flex justify-center items-center ">
-                                        <img key={catalog.id}  className=" h-50 w-50"
-                                             src={catalog.src} alt={catalog.caption1}></img>
-
+                                <div className="flex flex-col h-full">
+                                    <div className="bg-gray-100 flex justify-center items-center h-64 sm:h-72 md:h-80">
+                                        <img
+                                            src={catalog.src}
+                                            alt={catalog.caption1}
+                                            className="h-40 w-40 object-contain"
+                                        />
                                     </div>
-                                    <p className="text-xl pt-5 font-bold text-black font-ubuntu">{catalog.caption1}</p>
-                                    <p className="pt-2 font-ubuntu">{catalog.caption2}</p>
-                                    <p className="pt-2 font-ubuntu">{catalog.caption3}</p>
-                                    <div className="pt-3">
-                                        <button
-                                            className="cursor-pointer bg-red-600 font-bold font-ubuntu text-black h-10 w-40 ">ADD
-                                            TO CART
+
+                                    {/* Texts */}
+                                    <p className="text-lg sm:text-xl pt-5 font-bold text-black font-ubuntu">{catalog.caption1}</p>
+                                    <p className="pt-2 text-sm sm:text-base font-ubuntu">{catalog.caption2}</p>
+                                    <p className="pt-2 text-sm sm:text-base font-ubuntu">{catalog.caption3}</p>
+
+                                    {/* Spacer + Button */}
+                                    <div className="mt-auto pt-4">
+                                        <button className="w-full sm:w-40 bg-red-600 text-black font-bold font-ubuntu h-10">
+                                            ADD TO CART
                                         </button>
                                     </div>
                                 </div>
+
                             ))}
                         </div>
                     </div>
                 </div>
-                <div className="container mx-auto  bg-transparent h-200 w-full py-10  " >
-                    <div className=" container mx-auto grid grid-cols-3 flex-wrap justify-center w-full  place-items-center pt-50">
-                        {images_2.map((image_2)=>(
-                            <div className=" flex relative w-100 h-126 ">
+                <div className="container mx-auto bg-transparent py-10">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-4">
+                        {images_2.map((image_2) => (
+                            <div key={image_2.id} className="relative w-full h-102 sm:h-80 md:h-156 overflow-hidden ">
+                                <img src={image_2.src} alt={image_2.caption1} className="w-full h-full object-cover"
+                                />
 
-                            <img  className="w-full h-full " key={image_2.id} src={image_2.src} alt=""/>
-                                <div className="absolute bottom-0 w-80 h-30 bg-black  text-white p-4">
-                                    <p className="text-white font-ubuntu  text-sm">{image_2.caption1}</p>
-                                    <h2 className="text-white text-3xl font-bold font-ubuntu ">{image_2.caption2}</h2>
+                                {/* Overlay Caption */}
+                                <div className="absolute bottom-0 w-full lg:w-70 bg-black bg-opacity-80 text-white p-4">
+                                    <p className="text-sm font-ubuntu">{image_2.caption1}</p>
+                                    <h2 className="text-2xl sm:text-3xl font-bold font-ubuntu">{image_2.caption2}</h2>
                                 </div>
                             </div>
                         ))}
                     </div>
                 </div>
-                <div className="bg-white w-full h-100">
-                    <div className="container mx-auto pl-30 pt-20 flex ">
-                        <div className="bg-black absolute h-160 w-150 mt-60">
-                            <div className="text-center flex justify-center items-center">
-                            <div className="  bg-transparent items-center  h-100 w-100 mt-20">
-                            <h1 className="text-white font-ubuntu text-left text-5xl">New Clothes technologies</h1>
-                            <p className="text-white font-ubuntu text-xl font-light text-left mt-10">Mauris vitae ultricies leo integer <br></br> malesuada.</p>
-                            <p className="text-white font-ubuntu text-xl font-light text-left ">Odio tempor orci dapibus ultrices in.<br></br>  Egestas diam in arcu cursus euismod.<br></br>  Dictum purus viverra accumsan in nisl.<br></br>  Tempor id eu</p>
-                                <img className="h-60 w-60  " src="../../public/9eebe3656ce9480b941a34e2ed54bb37-removebg-preview.png" alt="signature"></img>
-                            </div>
+                <div className="bg-white w-full py-16">
+                    <div className="w-full bg-white py-20">
+                        <div className="container mx-auto flex flex-col lg:flex-row items-center justify-center px-4 lg:px-0 relative">
+
+                            {/* Black Box */}
+                            <div className="bg-black text-white p-10 w-full lg:w-1/3 z-10 relative font-ubuntu">
+                                <div className="bg-transparent p-10 text-left">
+                                    <h2 className="text-3xl lg:text-4xl font-bold mb-6">New Cloth <br />Technologies</h2>
+                                    <p className="text-sm leading-relaxed mb-3">Mauris vitae ultricies leo integer malesuada.</p>
+                                    <p className="text-sm leading-relaxed mb-3">Odio tempor orci dapibus ultrices in.</p>
+                                    <p className="text-sm leading-relaxed mb-3">Egestas diam in arcu cursus euismod.</p>
+                                    <p className="text-sm leading-relaxed mb-3">Dictum purus viverra accumsan in nisl.</p>
+                                    <p className="text-sm leading-relaxed mb-3">Tempor id eu</p>
+                                    <p className="font-cursive text-xl mt-100">Alice W</p>
+                                </div>
                             </div>
 
-                        </div>
-                        <div className="ml-110">
-                            <img className="h-260 w-200" src="../../public/Lozan.jpg" alt="HEadimage"></img>
+                            {/* Image with responsive overlap */}
+                            <div className="w-full lg:w-1/2 -ml-0 lg:-ml-[200px] mt-10 lg:mt-0 z-0">
+                                <img
+                                    src="../../../public/Lozan.jpg"
+                                    alt="Fashion model"
+                                    className="w-full h-auto  object-cover"
+                                />
+                            </div>
 
                         </div>
                     </div>
+
                 </div>
-                <div className="bg-white w-full h-240">
+                <div className="bg-white w-full pt-1">
                     <h2 className="text-center font-ubuntu text-xl text-black pt-10">Check out popular products</h2>
                     <h1 className="text-center font-ubuntu text-5xl text-black pt-10">Popular Products</h1>
-                    <div className="container mx-auto gap-8 content-center justify-center pt-40 flex flex-wrap grid-cols-3">
-                    {images_3.map((image3)=> (
 
-
-
-                        <div className="max-w-md justify-center content-center   ">
-                            <a href="#">
-                                <img className=" h-80 w-full " key={image3.id}  src={image3.src} alt=""/>
-                            </a>
-                            <div className="p-5">
+                    <div className="container mx-auto gap-8 content-center justify-center pt-10 lg:pt-20 flex flex-wrap grid-cols-3">
+                        {images_3.map((image3) => (
+                            <div key={image3.id} className="max-w-md justify-center content-center">
                                 <a href="#">
-                                    <h5 className="mb-2 text-2xl font-bold tracking-tight font-ubuntu text-black">{image3.caption1}</h5>
+                                    <img className="h-80 w-full" src={image3.src} alt="" />
                                 </a>
-                                <p className="mb-3 font-normal  dark:text-gray-400">{image3.caption2}</p>
-                                <a href="#">
-                                    <h5 className="mb-3 font-normal font-ubuntu text-sm dark:text-gray-400">{image3.caption4}</h5>
-                                </a>
+                                <div className="p-5">
+                                    <a href="#">
+                                        <h5 className="mb-2 text-2xl font-bold tracking-tight font-ubuntu text-black">{image3.caption1}</h5>
+                                    </a>
+                                    <p className="mb-3 font-normal dark:text-gray-400">{image3.caption2}</p>
+                                    <a href="#">
+                                        <h5 className="mb-3 font-normal font-ubuntu text-sm dark:text-gray-400">{image3.caption4}</h5>
+                                    </a>
+                                </div>
                             </div>
-                        </div>
-                    ))}
+                        ))}
                     </div>
                 </div>
-                <div className="bg-white h-150  w-full">
-                    <div className="container relative mx-auto justify-center flex  ">
-                        <img className=" h-120 w-300 " src="../../public/pexels-christian-heitz-285904-842711.jpg"
-                             alt="newsletter"></img>
-                        <p className="absolute pt-30 text-5xl font-ubuntu text-white font-bold">Newsletter Updates</p>
-                        <p className="absolute pt-50 text-3xl font-ubuntu text-white ">Subscribe to receive emails on
-                            new product arrivals & special offers</p>
-                        <div className="absolute pt-70 pr-60">
+                <div className="bg-white w-full py-16">
+                    <div className="relative container mx-auto flex flex-col lg:flex-row items-center justify-center gap-6 px-4">
 
-                            <input type="text" id="first_name"
-                                   className="bg-white text-xl w-100 p-3.5 dark:text-black "
-                                   placeholder="Email" required/>
-                        </div>
-                        <div className="absolute pt-70 pl-100">
-                        <button type="Submit" className="text-white h-15  bg-red-600  focus:ring-4 focus:outline-none focus:ring-blue-300 font-ubuntu text-sm w-55 px-0 py-2.5 text-center ">Subscribe</button>
+                        {/* Background Image */}
+                        <img
+                            className="w-full max-w-4xl h-auto object-cover "
+                            src="../../public/pexels-christian-heitz-285904-842711.jpg"
+                            alt="newsletter"
+                        />
+
+                        {/* Overlay Content */}
+                        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
+                            <h2 className="text-4xl md:text-5xl font-bold text-white font-ubuntu">Newsletter Updates</h2>
+                            <p className="text-white text-lg md:text-xl mt-4 font-ubuntu">
+                                Subscribe to receive emails on new product arrivals & special offers
+                            </p>
+
+                            {/* Input + Button */}
+                            <div className="flex flex-col pl-10 pr-10 md:flex-row items-center mt-6 w-full max-w-xl gap-4">
+                                <input
+                                    type="email"
+                                    placeholder="Enter your email"
+                                    className="w-full bg-white p-3  border-none text-black font-ubuntu"
+                                />
+                                <button
+                                    type="submit"
+                                    className="bg-red-600 text-white px-6 py-3  font-ubuntu hover:bg-red-700 transition"
+                                >
+                                    Subscribe
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
