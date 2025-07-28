@@ -37,7 +37,7 @@ function Navbar() {
                         <Link to="/product_list"><li>Products</li></Link>
                         <a href="#"><li>Contact Us</li></a>
                         <a href="#"><li>News</li></a>
-                        <a href="#"><li>Services</li></a>
+                        <Link to="/services"><li>Services</li></Link>
                     </ul>
 
                     {/* Right Icons */}
@@ -67,7 +67,7 @@ function Navbar() {
                             <Link to="/product_list"><li>Products</li></Link>
                             <a href="#"><li>Contact Us</li></a>
                             <a href="#"><li>News</li></a>
-                            <a href="#"><li>Services</li></a>
+                            <Link to="/services"><li>Services</li></Link>
                         </ul>
 
                         <div className="flex justify-center item-center space-x-10 pt-7">

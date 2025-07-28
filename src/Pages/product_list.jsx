@@ -13,7 +13,7 @@ function ProductList() {
         axios.get("https://fakestoreapi.com/products/")
             .then(res => {
                 setProducts(res.data);
-                const filter = res.data.filter((p) => p.price < 20).slice(0, 5)
+                const filter = res.data.filter((p) => p.price < 20).slice(0, 6)
                 console.log(res.data)
                 setFiltered_Products(filter)
                 console.log(filter)
@@ -40,7 +40,7 @@ function ProductList() {
             </div>
             <div className="bg-white ">
                 <div className="flex px-20 py-4 container mx-auto">
-                    <aside className="rounded-xl p-4 min-h-[500px] w-74 bg-transparent overflow-y-auto top-5 h-screen sticky mr-5 max-h-[calc(150px)] space-y-4">
+                    <aside className="rounded-xl hidden md:block p-4 min-h-[500px] w-74 bg-transparent overflow-y-auto top-5 h-screen sticky mr-5 max-h-[calc(150px)] space-y-4">
                         <h2 className="text-2xl font-bold mb-5 text-black">Top Cheap Products</h2>
                         {Filter_Products.map((product) => (
                             <div key={product.id} className="flex items-center space-x-3 p-2 rounded-lg ">
@@ -59,7 +59,7 @@ function ProductList() {
                             className="w-full mt-6"
                         />
                     </aside>
-                    <main className="w-3/4">
+                    <main className="w-full md:w-3/4 ">
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                             {Products.map((products) => (
                                 <Product_Card
