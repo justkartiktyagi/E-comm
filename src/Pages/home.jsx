@@ -265,7 +265,7 @@ function Home() {
                 </div>
                 <div className="bg-white w-full py-16">
                     <div className="container mx-auto px-4">
-                        <div className="relative w-full max-w-4xl mx-auto overflow-hidden rounded-lg">
+                        <div className="relative w-full max-w-8xl mx-auto overflow-hidden">
                             {/* Background Image */}
                             <img
                                 className="w-full h-100   object-cover"
