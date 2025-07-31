@@ -9,7 +9,7 @@ function Navbar() {
 
     return (
         <>
-            {/* Top Bar sm--> works uunder 640px */ }
+            {/* Top Bar sm--> works uunder 640px */}
             <div className=" hidden sm:block w-full h-10 bg-black relative">
                 <div className="text-left pl-5 sm:pl-20 pt-2">
                     <p className="text-white font-ubuntu text-sm sm:text-base">
@@ -33,7 +33,7 @@ function Navbar() {
                     {/* Desktop Menu */}
                     <ul className="hidden 2xl:flex font-ubuntu font-medium space-x-20">
                         <Link to="/"><li>Home</li></Link>
-                        <a href="#"><li>About Us</li></a>
+                        <Link to="/about"><li>About Us</li></Link>
                         <Link to="/product_list"><li>Products</li></Link>
                         <a href="#"><li>Contact Us</li></a>
                         <a href="#"><li>News</li></a>
@@ -48,7 +48,7 @@ function Navbar() {
                     </div>
 
                     {/* Mobile Menu Toggle */}
-                    
+
                     <button className="2xl:hidden" onClick={() => setMenuOpen(!menuOpen)}>
                         <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2"
                             viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
@@ -63,7 +63,7 @@ function Navbar() {
                     <div className="2xl:hidden text-center px-5 pb-4 bg-white font-ubuntu font-medium">
                         <ul className="font-medium font-ubuntu space-x-10">
                             <Link to="/"><li>Home</li></Link>
-                            <a href="#"><li>About Us</li></a>
+                            <Link to="/about"><li>About Us</li></Link>
                             <Link to="/product_list"><li>Products</li></Link>
                             <a href="#"><li>Contact Us</li></a>
                             <a href="#"><li>News</li></a>
@@ -73,8 +73,8 @@ function Navbar() {
                         <div className="flex justify-center item-center space-x-10 pt-7">
                             <a href="#"><img className="w-6 h-6" src="../../../public/search.png" alt="Search" /></a>
                             <a href="#"><img className="w-6 h-6" src="../../../public/people.png" alt="User" /></a>
-                            <a href="#"><img className="w-6 h-6" src="../../../public/shopping-bag.png" alt=""/></a>
-                            
+                            <a href="#"><img className="w-6 h-6" src="../../../public/shopping-bag.png" alt="" /></a>
+
                         </div>
                     </div>
                 )}
