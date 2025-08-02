@@ -10,6 +10,9 @@ function About() {
                     <p className="font-ubuntu text-black">Home/About Us</p>
                     <p className="text-black text-5xl font-bold font-ubuntu text-center  ">About Us</p>
                 </div>
+                <div className="bg-white h-100 w-full ">
+
+                </div>
             </div>
         </>
     )
