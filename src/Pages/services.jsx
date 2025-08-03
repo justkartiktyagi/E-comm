@@ -59,7 +59,7 @@ function Services() {
                 </div>
 
                 <div className="bg-white w-full h-full gap-5 grid  place-items-center ">
-                    <div className="place-items-center grid lg:gap-20 px-6 py-4 lg:px-15 lg:py-15 grid-cols-1 lg:grid-cols-2 lg:px-30 container mx-auto ">
+                    <div className="place-items-center grid lg:gap-20 px-6 py-4 lg:py-15 grid-cols-1 lg:grid-cols-2 lg:px-30 container mx-auto ">
                         <div className="">
                             <img className="h-full w-full" src="../../../public/pexels-ionela-mat-268382825-32582889.jpg" alt="1" />
 
