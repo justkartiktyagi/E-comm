@@ -125,7 +125,7 @@ function Home() {
         <>
             {/* max-w-screen-xl it uses bascally like a container max wisth 1280px */}
             <div>
-                <div className="relative w-full max-w-screen-xl mx-auto">
+                <div className="relative w-full max-w-screen-xl pt-[110px] mx-auto">
                     <img
                         className="w-full h-auto object-cover"
                         src="../../public/Black Red Minimalist Fashion Product Introduction Landscape Banner.png"
@@ -173,7 +173,7 @@ function Home() {
                                         <img
                                             src={catalog.src}
                                             alt={catalog.caption1}
-                                            className="h-40 w-40 object-contain"
+                                            className="hover:scale-130 transition-transform duration-400 h-40 w-40 object-contain"
                                         />
                                     </div>
 

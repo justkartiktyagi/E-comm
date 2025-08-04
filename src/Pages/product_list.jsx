@@ -34,7 +34,7 @@ function ProductList() {
 
     return (
         <div>
-            <div className="flex flex-col  items-center justify-center h-50 w-full">
+            <div className="flex flex-col pt-[200px] pb-[120px]   items-center justify-center w-full">
                 <p className="text-white font-ubuntu">Home/Products</p>
                 <p className="text-5xl text-white font-bold font-ubuntu ">PRODUCTS</p>
             </div>

@@ -32,7 +32,7 @@ function Services() {
     return (
         <>
             <div className="">
-                <div className="flex flex-col  items-center justify-center h-80 w-full">
+                <div className="flex flex-col  pt-[200px] pb-[120px]  items-center justify-center w-full">
                     <p className="text-white font-ubuntu">Home/Services</p>
                     <p className="text-5xl text-white font-bold font-ubuntu ">Services</p>
                 </div>

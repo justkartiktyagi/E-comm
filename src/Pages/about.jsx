@@ -38,9 +38,9 @@ function About() {
     return (
         <>
             <div>
-                <section className="justify-center flex flex-col items-center bg-gray-200 py-25 w-full ">
-                    <p className="font-ubuntu text-black">Home/About Us</p>
-                    <p className="text-black text-5xl font-bold font-ubuntu text-center  ">About Us</p>
+                <section className="justify-center  pt-[200px] pb-[120px]  flex flex-col items-center bg-black py-25 w-full ">
+                    <p className="font-ubuntu text-white ">Home/About Us</p>
+                    <p className="text-white text-5xl font-bold font-ubuntu text-center  ">About Us</p>
                 </section>
 
                 <section className="bg-white ">

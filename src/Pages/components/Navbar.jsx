@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import '/src/index.css'
 import { Link } from "react-router-dom";
@@ -7,8 +7,33 @@ function Navbar() {
 
     const [menuOpen, setMenuOpen] = useState(false);
 
+
+
+    const[showNavbar,setShowNavbar]=useState(true)
+    const[lastScrollY,setLastScrollY]=useState(0)
+
+    const controlNavabr = () =>{
+        if(window.scrollY >lastScrollY){
+            setShowNavbar(false);
+        }
+        else{
+            setShowNavbar(true)
+        }
+
+        setLastScrollY(window.scrollY)
+    }
+
+    useEffect(()=>{
+        window.addEventListener("scroll",controlNavabr)
+
+        return()=>{
+            window.removeEventListener("scroll",controlNavabr)
+        }
+    },[lastScrollY])
+
     return (
         <>
+         <div  className={`fixed top-0 left-0 w-full bg-white shadow-md z-50 transition-transform duration-300 ${showNavbar ? "translate-y-0" : "-translate-y-full" }`}>
             {/* Top Bar sm--> works uunder 640px */}
             <div className=" hidden sm:block w-full h-10 bg-black relative">
                 <div className="text-left pl-5 sm:pl-20 pt-2">
@@ -36,7 +61,7 @@ function Navbar() {
                         <Link to="/about"><li>About Us</li></Link>
                         <Link to="/product_list"><li>Products</li></Link>
                         <a href="#"><li>Contact Us</li></a>
-                        <a href="#"><li>News</li></a>
+                        <Link to="/news"><li>News</li></Link>
                         <Link to="/services"><li>Services</li></Link>
                     </ul>
 
@@ -66,7 +91,7 @@ function Navbar() {
                             <Link to="/about"><li>About Us</li></Link>
                             <Link to="/product_list"><li>Products</li></Link>
                             <a href="#"><li>Contact Us</li></a>
-                            <a href="#"><li>News</li></a>
+                            <Link to="/news"><li>News</li></Link>
                             <Link to="/services"><li>Services</li></Link>
                         </ul>
 
@@ -79,7 +104,7 @@ function Navbar() {
                     </div>
                 )}
             </div>
-
+        </div>
 
         </>
     )
