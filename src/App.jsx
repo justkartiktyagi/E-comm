@@ -10,6 +10,7 @@ import Product_Card from "./Pages/components/product_card.jsx";
 import Services from './Pages/services.jsx';
 import About from './Pages/about.jsx';
 import News from './Pages/news.jsx';
+import Contact_Us from './Pages/contact_us.jsx';
 function App() {
 
 
@@ -24,6 +25,7 @@ function App() {
                 <Route path='/services' element={<Services/>}/>
                 <Route path='/about' element={<About/>}/>
                 <Route path='/news' element={<News/>}/>
+                <Route path='/contact_us' element={<Contact_Us/>}/>
             </Routes>
         <Footer />
 

@@ -60,7 +60,7 @@ function Navbar() {
                         <Link to="/"><li>Home</li></Link>
                         <Link to="/about"><li>About Us</li></Link>
                         <Link to="/product_list"><li>Products</li></Link>
-                        <a href="#"><li>Contact Us</li></a>
+                        <Link to="/contact_us"><li>Contact Us</li></Link>
                         <Link to="/news"><li>News</li></Link>
                         <Link to="/services"><li>Services</li></Link>
                     </ul>
@@ -90,7 +90,7 @@ function Navbar() {
                             <Link to="/"><li>Home</li></Link>
                             <Link to="/about"><li>About Us</li></Link>
                             <Link to="/product_list"><li>Products</li></Link>
-                            <a href="#"><li>Contact Us</li></a>
+                            <Link to="/contact_us"><li>Contact Us</li></Link>
                             <Link to="/news"><li>News</li></Link>
                             <Link to="/services"><li>Services</li></Link>
                         </ul>
