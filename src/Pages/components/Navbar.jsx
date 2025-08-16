@@ -69,7 +69,7 @@ function Navbar() {
                     <div className="hidden 2xl:flex space-x-7 ">
                         <a href="#"><img className="w-6 h-6" src="../../../public/search.png" alt="Search" /></a>
                         <a href="#"><img className="w-6 h-6" src="../../../public/people.png" alt="User" /></a>
-                        <a href="#"><img className="w-6 h-6" src="../../../public/shopping-bag.png" alt="Cart" /></a>
+                        <Link to="/cart"><img className="w-6 h-6" src="../../../public/shopping-bag.png" alt="Cart" /></Link>
                     </div>
 
                     {/* Mobile Menu Toggle */}
@@ -98,7 +98,7 @@ function Navbar() {
                         <div className="flex justify-center item-center space-x-10 pt-7">
                             <a href="#"><img className="w-6 h-6" src="../../../public/search.png" alt="Search" /></a>
                             <a href="#"><img className="w-6 h-6" src="../../../public/people.png" alt="User" /></a>
-                            <a href="#"><img className="w-6 h-6" src="../../../public/shopping-bag.png" alt="" /></a>
+                            <Link to="/cart"><img className="w-6 h-6" src="../../../public/shopping-bag.png" alt="Cart" /></Link>
 
                         </div>
                     </div>
