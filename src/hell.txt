@@ -1,34 +1,135 @@
-import { useEffect, useState } from "react";
+import React from "react";
+import { useCart } from "../context/CartContext"; // 👈 apna context import kar
 
-export default function Navbar() {
-  const [showNavbar, setShowNavbar] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
+function Cart() {
+    const { cart, removeFromCart, updateQuantity, subtotal } = useCart(); // 👈 context se values lo
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
+    return (
+        <div>
+            {/* Banner */}
+            <div className="flex flex-col pt-[200px] pb-[120px] items-center justify-center w-full">
+                <p className="text-white font-ubuntu">Home / Cart</p>
+                <p className="text-5xl text-white font-bold font-ubuntu">Cart</p>
+            </div>
 
-      if (currentScrollY > lastScrollY) {
-        setShowNavbar(false); // Scrolling down → hide navbar
-      } else {
-        setShowNavbar(true); // Scrolling up → show navbar
-      }
+            {/* Cart Content */}
+            <div className="bg-white w-full py-10">
+                <div className="grid grid-cols-[3fr_1fr] container mx-auto gap-6">
+                    
+                    {/* Left Side - Cart Items */}
+                    <div className="p-6">
+                        <table className="w-full border-collapse">
+                            <thead>
+                                <tr className="text-left border-b">
+                                    <th className="py-3">Product</th>
+                                    <th className="py-3">Quantity</th>
+                                    <th className="py-3">Subtotal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {cart.length === 0 ? (
+                                    <tr>
+                                        <td colSpan="3" className="text-center py-6 text-gray-500">
+                                            Your cart is empty 🛒
+                                        </td>
+                                    </tr>
+                                ) : (
+                                    cart.map((item) => (
+                                        <tr key={item.id} className="border-b">
+                                            {/* Product */}
+                                            <td className="flex items-center gap-4 py-4">
+                                                <img
+                                                    src={item.image}
+                                                    alt={item.name}
+                                                    className="w-20 h-20 object-cover border"
+                                                />
+                                                <div>
+                                                    <p className="font-medium">{item.name}</p>
+                                                    <p className="text-gray-600">${item.price}</p>
+                                                    <button
+                                                        onClick={() => removeFromCart(item.id)}
+                                                        className="text-red-500 text-sm"
+                                                    >
+                                                        Remove
+                                                    </button>
+                                                </div>
+                                            </td>
 
-      setLastScrollY(currentScrollY); // Update last scroll position
-    };
+                                            {/* Quantity */}
+                                            <td className="py-0">
+                                                <div className="flex items-center border w-28 justify-between px-2 py-1">
+                                                    <button
+                                                        className="text-lg"
+                                                        onClick={() =>
+                                                            updateQuantity(item.id, item.quantity - 1)
+                                                        }
+                                                        disabled={item.quantity <= 1}
+                                                    >
+                                                        -
+                                                    </button>
+                                                    <span>{item.quantity}</span>
+                                                    <button
+                                                        className="text-lg"
+                                                        onClick={() =>
+                                                            updateQuantity(item.id, item.quantity + 1)
+                                                        }
+                                                    >
+                                                        +
+                                                    </button>
+                                                </div>
+                                            </td>
 
-    window.addEventListener("scroll", handleScroll);
+                                            {/* Subtotal */}
+                                            <td className="py-4 text-gray-600">
+                                                ${item.price * item.quantity}
+                                            </td>
+                                        </tr>
+                                    ))
+                                )}
+                            </tbody>
+                        </table>
 
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
+                        {/* Coupon + Update Buttons */}
+                        {cart.length > 0 && (
+                            <div className="flex items-center mt-6 gap-4">
+                                <div className="flex gap-2 w-1/2">
+                                    <input
+                                        type="text"
+                                        placeholder="Coupon Code"
+                                        className="border px-3 py-2 w-full"
+                                    />
+                                    <button className="bg-red-600 text-white px-10 py-2">
+                                        Apply Coupon
+                                    </button>
+                                </div>
+                                <div className="flex justify-end w-1/2">
+                                    <button type="button" className="bg-red-600 text-white px-10 py-3">
+                                        Update Cart
+                                    </button>
+                                </div>
+                            </div>
+                        )}
+                    </div>
 
-  return (
-    <nav
-      className={`fixed top-0 left-0 w-full bg-white shadow transition-transform duration-300 z-50 ${
-        showNavbar ? "translate-y-0" : "-translate-y-full"
-      }`}
-    >
-      <div className="p-4 text-xl font-bold text-center">My Navbar</div>
-    </nav>
-  );
+                    {/* Right Side - Cart Totals */}
+                    <div className="border p-6">
+                        <h2 className="text-lg font-semibold mb-4">Cart Totals</h2>
+                        <div className="flex justify-between py-2 border-b">
+                            <span className="text-gray-600">Sub-total</span>
+                            <span>${subtotal}</span>
+                        </div>
+                        <div className="flex justify-between py-2 font-semibold">
+                            <span>Total</span>
+                            <span>${subtotal}</span>
+                        </div>
+                        <button className="bg-red-600 text-white w-full py-3 mt-4">
+                            Proceed to Checkout
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
 }
+
+export default Cart;

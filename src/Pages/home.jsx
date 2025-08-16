@@ -1,6 +1,8 @@
-
+import { useCart } from "./components/Context";
 
 function Home() {
+
+    const { addToCart } = useCart()
 
     const images = [
 
@@ -36,14 +38,14 @@ function Home() {
             id: 5,
             src: "../../public/Check_out_our_cap_selection_-removebg-preview.png",
             caption1: "Snapback Cap",
-            caption2: "$30",
+            price: "$30",
             caption3: "Accessories",
         },
         {
             id: 6,
             src: "../../public/Zenni_Round_Eyeglasses_Gray_Stainless_Steel-removebg-preview.png",
             caption1: "Retro Sunglasses",
-            caption2: "$55",
+            price: "$55",
             caption3: "Accessories",
 
         },
@@ -51,14 +53,14 @@ function Home() {
             id: 7,
             src: "../../public/Nike_Air_Force_1__07_LV8_Men_s_Shoes__Black_-removebg-preview.png",
             caption1: "Gray Shoes",
-            caption2: "$50",
+            price: "$50",
             caption3: "sneakers",
         },
         {
             id: 8,
             src: "../../public/Manfinity_Hypemode_Men_Color_Block_Playing_Card_Print_Short_Sleeve_Button_Up_Collar_Shirt_Without_Tee-removebg-preview.png",
             caption1: "Black T-Shirt",
-            caption2: "$50",
+            price: "$50",
             caption3: "T-Shirts",
 
         }
@@ -168,7 +170,7 @@ function Home() {
                         {/* Product Grid */}
                         <div className="pt-10 sm:pt-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
                             {catalogs.map((catalog) => (
-                                <div className="flex flex-col h-full">
+                                <div key={catalog.id} className="flex flex-col h-full">
                                     <div className="bg-gray-100 flex justify-center items-center h-64 sm:h-72 md:h-80">
                                         <img
                                             src={catalog.src}
@@ -179,12 +181,22 @@ function Home() {
 
                                     {/* Texts */}
                                     <p className="text-lg sm:text-xl pt-5 font-bold text-black font-ubuntu">{catalog.caption1}</p>
-                                    <p className="pt-2 text-sm sm:text-base font-ubuntu">{catalog.caption2}</p>
+                                    <p className="pt-2 text-sm sm:text-base font-ubuntu">{catalog.price}</p>
                                     <p className="pt-2 text-sm sm:text-base font-ubuntu">{catalog.caption3}</p>
 
                                     {/* Spacer + Button */}
                                     <div className="mt-auto pt-4">
-                                        <button className="w-full sm:w-40 bg-red-600 text-black font-bold font-ubuntu h-10">
+                                        <button
+                                            className="w-full sm:w-40 cursor-pointer bg-red-600 text-black font-bold font-ubuntu h-10"
+                                            onClick={() =>
+                                                addToCart({
+                                                    id: catalog.id,
+                                                    name: catalog.caption1,
+                                                    price: catalog.price || 0,
+                                                    image: catalog.src,
+                                                })
+                                            }
+                                        >
                                             ADD TO CART
                                         </button>
                                     </div>
