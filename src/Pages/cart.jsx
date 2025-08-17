@@ -4,7 +4,7 @@ import { useCart } from "./components/Context";
 
 function Cart() {
 
-    const { cart, removeFromCart, UpdateQuantity ,formattedSubtotal } = useCart()
+    const { cart, removeFromCart, UpdateQuantity, formattedSubtotal } = useCart()
 
     return (
         <div>
@@ -52,7 +52,7 @@ function Cart() {
                                             </td>
                                             {/* Subtotal */}
                                             <td className="py-4 text-gray-600"> $ {(item.price * item.quantity).toFixed(2)}</td>
-                                            <td className="py-4 px-4 text-lg" onClick={()=>removeFromCart(item.id)}>
+                                            <td className="py-4 px-4 text-lg" onClick={() => removeFromCart(item.id)}>
                                                 <img className="h-6 w-6 cursor-pointer " src="../../public/bin.png" alt="" srcset="" />
                                             </td>
                                         </tr>

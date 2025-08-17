@@ -25,7 +25,7 @@ function Product_Card({ product }) {
                 <span className="text-lg font-bold text-green-600">${product.price}</span>
                 {/* <br /> */}
                 <button className="bg-black cursor-pointer  text-white w-40 py-2 mt-2 ml-2 text-sm font-medium hover:bg-gray-800 transition" onClick={() => addToCart(product)}>
-                Add To Cart
+                    Add To Cart
                 </button>
             </div>
         </div>

@@ -68,7 +68,7 @@ function ProductList() {
                     <main className="w-full md:w-3/4">
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                             {Products.map((product) => (
-                                <Product_Card key={product.id} product={product}/>
+                                <Product_Card key={product.id} product={product} />
                             ))}
                         </div>
                     </main>

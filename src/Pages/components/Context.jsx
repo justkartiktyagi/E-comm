@@ -10,16 +10,16 @@ export const useCart = () => useContext(CartContext);
 
 // Cart Provider
 export const CartProvider = ({ children }) => {
-    const [cart, setcart] = useState(()=>{
-        const savedCart=localStorage.getItem("cart");
-        return savedCart ?JSON.parse(savedCart): []
+    const [cart, setcart] = useState(() => {
+        const savedCart = localStorage.getItem("cart");
+        return savedCart ? JSON.parse(savedCart) : []
 
     });
 
-    useEffect(()=>{
-        localStorage.setItem("cart",JSON.stringify(cart));
+    useEffect(() => {
+        localStorage.setItem("cart", JSON.stringify(cart));
 
-    },[cart])
+    }, [cart])
 
     // Add item
     const addToCart = (product) => {
@@ -54,7 +54,7 @@ export const CartProvider = ({ children }) => {
     const subtotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0)
     const formattedSubtotal = subtotal.toFixed(2);
     return (
-        <CartContext.Provider value={{ cart, addToCart, removeFromCart, UpdateQuantity, clearCart, subtotal , formattedSubtotal }}>
+        <CartContext.Provider value={{ cart, addToCart, removeFromCart, UpdateQuantity, clearCart, subtotal, formattedSubtotal }}>
             {children}
         </CartContext.Provider>
     )
