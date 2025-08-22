@@ -41,9 +41,9 @@ function ProductList() {
 
             {/* Main Section */}
             <div className="bg-white">
-                <div className="flex px-20 py-4 container mx-auto">
+                <div className="flex px-20 py-4 pb-20 container mx-auto">
                     {/* Sidebar */}
-                    <aside className="rounded-xl hidden md:block p-4 min-h-[500px] w-74 bg-transparent overflow-y-auto top-5 h-screen sticky mr-5 max-h-[calc(150px)] space-y-4">
+                    <aside className="rounded-xl hidden md:block p-2 min-h-[500px]  w-74 bg-transparent overflow-y-auto top-5 h-screen sticky mr-5 max-h-[calc(150px)] space-y-4">
                         <h2 className="text-2xl font-bold mb-5 text-black">Top Cheap Products</h2>
                         {Filter_Products.map((product) => (
                             <div key={product.id} className="flex items-center space-x-3 p-2 rounded-lg">
@@ -62,6 +62,7 @@ function ProductList() {
                                 </div>
                             </div>
                         ))}
+                        <div><img className="h-90 w-full " src="../../public/ChatGPT Image Jul 26, 2025, 08_50_42 PM.png" alt="source"/></div>
                     </aside>
 
                     {/* Product Grid */}
