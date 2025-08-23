@@ -56,10 +56,6 @@ function News() {
 
 
     ]
-
-
-
-
     return (
         <>
             <div>

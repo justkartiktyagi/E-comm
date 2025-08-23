@@ -16,9 +16,8 @@ function Cart() {
             <div className="bg-white w-full py-10">
                 <div className="container mx-auto grid grid-cols-1 lg:grid-cols-[3fr_1fr] gap-6">
                     
-                    {/* Cart Table (Desktop) / Cards (Mobile) */}
                     <div className="p-6">
-                        {/* Table Head (Hidden on Mobile) */}
+                 
                         <table className="w-full border-collapse hidden lg:table">
                             <thead>
                                 <tr className="text-left border-b">
@@ -38,7 +37,7 @@ function Cart() {
                                 ) : (
                                     cart.map((item) => (
                                         <tr key={item.id} className="border-b">
-                                            {/* Product */}
+                                          
                                             <td className="flex items-center gap-4 py-4">
                                                 <img src={item.image} alt={item.title} className="w-20 h-20 object-cover border" />
                                                 <div>
@@ -47,7 +46,7 @@ function Cart() {
                                                 </div>
                                             </td>
 
-                                            {/* Quantity */}
+                                      
                                             <td className="py-4">
                                                 <div className="flex items-center border w-28 justify-between px-2 py-1">
                                                     <button 
@@ -63,12 +62,10 @@ function Cart() {
                                                 </div>
                                             </td>
 
-                                            {/* Subtotal */}
                                             <td className="py-4 text-gray-600">
                                                 ${(item.price * item.quantity).toFixed(2)}
                                             </td>
 
-                                            {/* Remove */}
                                             <td className="py-4 px-4 text-lg cursor-pointer" onClick={() => removeFromCart(item.id)}>
                                                 <img className="h-6 w-6" src="../../public/bin.png" alt="Remove" />
                                             </td>
@@ -78,7 +75,6 @@ function Cart() {
                             </tbody>
                         </table>
 
-                        {/* Mobile Card View */}
                         <div className="space-y-6 lg:hidden">
                             {cart.length === 0 ? (
                                 <p className="text-center py-6 text-gray-500">Your cart is empty 🛒</p>
@@ -121,7 +117,6 @@ function Cart() {
                             )}
                         </div>
 
-                        {/* Coupon + Update */}
                         <div className="flex flex-col md:flex-row items-center mt-6 gap-4">
                             <div className="flex gap-2 w-full md:w-1/2">
                                 <input type="text" placeholder="Coupon Code" className="border px-3 py-2 w-full" />
@@ -133,7 +128,6 @@ function Cart() {
                         </div>
                     </div>
 
-                    {/* Cart Totals */}
                     <div className="border p-6 h-fit">
                         <h2 className="text-lg font-semibold mb-4">Cart totals</h2>
                         <div className="flex justify-between py-2 border-b">

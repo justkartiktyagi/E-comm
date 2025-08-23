@@ -38,7 +38,6 @@ function Navbar() {
     return (
         <>
             <div className={`fixed top-0 left-0 w-full bg-white shadow-md z-50 transition-transform duration-300 ${showNavbar ? "translate-y-0" : "-translate-y-full"}`}>
-                {/* Top Bar sm--> works uunder 640px */}
                 <div className=" hidden sm:block w-full h-10 bg-black relative">
                     <div className="text-left pl-5 sm:pl-20 pt-2">
                         <p className="text-white font-ubuntu text-sm sm:text-base">
@@ -53,13 +52,11 @@ function Navbar() {
                     </div>
                 </div>
 
-                {/* Main Navbar */}
                 <div className="w-full bg-white shadow-md">
                     <div className="container mx-auto px-5 flex items-center justify-between h-20">
-                        {/* Logo */}
+
                         <a href="#"><p className="text-2xl sm:text-3xl font-ubuntu font-medium">DripCode</p></a>
 
-                        {/* Desktop Menu */}
                         <ul className="hidden 2xl:flex font-ubuntu font-medium space-x-20">
                             <Link to="/"><li>Home</li></Link>
                             <Link to="/about"><li>About Us</li></Link>
@@ -69,9 +66,8 @@ function Navbar() {
                             <Link to="/services"><li>Services</li></Link>
                         </ul>
 
-                        {/* Right Icons */}
                         <div className="hidden 2xl:flex space-x-7 ">
-                           
+
                             <a href="#"><img className="w-6 h-6" src="../../../public/people.png" alt="User" /></a>
                             <Link to="/cart"><img className="w-6 h-6" src="../../../public/shopping-bag.png" alt="Cart" />
                                 {cart.length > 0 && (
@@ -92,8 +88,6 @@ function Navbar() {
                                 )}
                             </Link>
                         </div>
-
-                        {/* Mobile Menu Toggle */}
 
                         <button className="2xl:hidden" onClick={() => setMenuOpen(!menuOpen)}>
                             <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2"
@@ -117,7 +111,6 @@ function Navbar() {
                             </ul>
 
                             <div className="flex justify-center item-center space-x-10 pt-7">
-                               
                                 <a href="#"><img className="w-6 h-6" src="../../../public/people.png" alt="User" /></a>
                                 <Link to="/cart"><img className="w-6 h-6" src="../../../public/shopping-bag.png" alt="Cart" /></Link>
 
