@@ -49,7 +49,7 @@ function Services() {
                     ))}
                 </div>
 
-                <div className="grid place-items-center bg-white w-full ">
+                <div className="grid place-items-center bg-white py-10 w-full ">
                     <div className="grid grid-cols-1 lg:grid-cols-4 gap-5 px-5 py-7 place-items-center lg:px-30 container mx-auto">
                         <img src="../../../public/gucci-removebg-preview.png" alt="1" className="w-60 h-40 object-cover" />
                         <img src="../../../public/nike-removebg-preview.png" alt="2" className="w-60 h-40 object-cover" />
@@ -58,7 +58,7 @@ function Services() {
                     </div>
                 </div>
 
-                <div className="bg-white w-full h-full gap-5 grid  place-items-center ">
+                <div className="bg-gray-100 w-full h-full gap-5 grid  place-items-center ">
                     <div className="place-items-center grid lg:gap-20 px-6 py-4 lg:py-15 grid-cols-1 lg:grid-cols-2 lg:px-30 container mx-auto ">
                         <div className="">
                             <img className="h-full w-full" src="../../../public/pexels-ionela-mat-268382825-32582889.jpg" alt="1" />
@@ -72,7 +72,7 @@ function Services() {
                                 Etiam elementum euismod commodo. Proin eleifend eget quam ut efficitur.
                                 Mauris a accumsan mauris. Phasellus egestas et risus sit amet hendrerit.
                                 Nulla facilisi.</p>
-                            <button className="bg-white border-2 hover:bg-red-600 border-black p-4  h-17 w-40 mt-4 text-black" type="button">More Detail</button>
+                            <button className="bg-white border-2 hover:bg-red-600 border-black p-4 cursor-pointer h-17 w-40 mt-4 text-black" type="button">More Detail</button>
                         </div>
 
                     </div>
