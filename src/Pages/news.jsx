@@ -72,7 +72,7 @@ function News() {
                         {news_images.map((news) => (
                             <div key={news.id} className="flex flex-col bg-white h-full">
                                 <div className="w-full aspect-[3/2] overflow-hidden">
-                                    <img className="w-full h-full" src={news.src}/>
+                                    <img className="w-full h-full" src={news.src} />
                                 </div>
                                 <div className="flex flex-col justify-between gap-3 p-4">
                                     <p className="text-2xl font-bold font-ubuntu">{news.caption1}</p>

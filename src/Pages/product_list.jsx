@@ -62,7 +62,7 @@ function ProductList() {
                                 </div>
                             </div>
                         ))}
-                        <div><img className="h-90 w-full " src="../../public/ChatGPT Image Jul 26, 2025, 08_50_42 PM.png" alt="source"/></div>
+                        <div><img className="h-90 w-full " src="../../public/ChatGPT Image Jul 26, 2025, 08_50_42 PM.png" alt="source" /></div>
                     </aside>
 
                     {/* Product Grid */}
