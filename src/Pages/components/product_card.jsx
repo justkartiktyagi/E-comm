@@ -4,27 +4,23 @@ function Product_Card({ product }) {
     const { addToCart } = useCart();
 
     return (
-        <div className="bg-white w-full h-[390px] flex flex-col">
-            {/* Image */}
-            <img
-                className="hover:scale-115 transition-transform duration-400 h-48 w-full object-contain mb-8 mt-10"
-                src={product.image}
-                alt={product.title}
-            />
+       
+        <div className="bg-white w-full flex flex-col rounded-xl overflow-hidden">
+            {/* Image Wrapper */}
+            <div className="w-full aspect-[3/4] flex items-center justify-center">
+                <img className="object-contain w-full h-full p-8 hover:scale-125 transition-transform duration-300" src={product.image} alt={product.title}/>
+            </div>
 
             {/* Title + Category */}
-            <div>
-                <p className="mt-2 ml-5 font-semibold text-md">
-                    {product.title.length > 30 ? product.title.substring(0, 30) + "..." : product.title}
-                </p>
-                <p className="mt-2 ml-5 text-sm">{product.category}</p>
+            <div className="flex flex-col p-4 flex-grow">
+                <p className="font-semibold text-md">{product.title.length > 30 ? product.title.substring(0, 30) + "..." : product.title}</p>
+                <p className="text-sm text-gray-600">{product.category}</p>
             </div>
 
             {/* Price + Add to Cart */}
-            <div className="justify-between items-center ml-3 mt-4">
+            <div className="flex justify-between items-center p-4 mt-auto">
                 <span className="text-lg font-bold text-green-600">${product.price}</span>
-                {/* <br /> */}
-                <button className="bg-black cursor-pointer  text-white w-40 py-2 mt-2 ml-2 text-sm font-medium hover:bg-gray-800 transition" onClick={() => addToCart(product)}>
+                <button className="bg-black cursor-pointer text-white px-4 py-2 text-sm font-medium rounded hover:bg-gray-200 hover:text-black transition" onClick={() => addToCart(product)}>
                     Add To Cart
                 </button>
             </div>
