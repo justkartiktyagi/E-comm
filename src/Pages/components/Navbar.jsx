@@ -68,7 +68,7 @@ function Navbar() {
 
                         <div className="hidden 2xl:flex space-x-7 ">
 
-                            <a href="#"><img className="w-6 h-6" src="../../../public/people.png" alt="User" /></a>
+                            <Link to='/product_details'><img className="w-6 h-6" src="../../../public/people.png" alt="User" /></Link>
                             <Link to="/cart"><img className="w-6 h-6" src="../../../public/shopping-bag.png" alt="Cart" />
                                 {cart.length > 0 && (
                                     <span

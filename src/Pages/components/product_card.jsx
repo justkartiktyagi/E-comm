@@ -17,7 +17,7 @@ function Product_Card({ product }) {
 
             <div className="flex justify-between items-center p-4 mt-auto">
                 <span className="text-lg font-bold text-green-600">${product.price}</span>
-                <button className="bg-black cursor-pointer text-white px-4 py-2 text-sm font-medium rounded hover:bg-gray-200 hover:text-black transition" onClick={() => addToCart(product)}>
+                <button className="bg-blue-400 cursor-pointer text-white px-4 py-2 text-sm  rounded font-bold hover:bg-white hover:text-black transition duration-300" onClick={() => addToCart(product)}>
                     Add To Cart
                 </button>
             </div>
