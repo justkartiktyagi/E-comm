@@ -77,18 +77,18 @@ function About() {
                         </div>
                     </div>
                 </section>
-                
+
                 <section className="bg-white w-full py-16">
                     <div className="container mx-auto px-4">
                         <div className="relative w-full max-w-8xl mx-auto overflow-hidden">
-                           
+
                             <img
                                 className="w-full h-100   object-cover"
                                 src="../../../public/pexels-christian-heitz-285904-842711.jpg"
                                 alt="newsletter"
                             />
 
-                          
+
                             <div className="absolute inset-0 bg-opacity-50 flex flex-col items-center justify-center px-4 text-center">
                                 <h2 className="text-3xl md:text-5xl font-bold text-white font-ubuntu">
                                     Newsletter Updates
@@ -97,7 +97,7 @@ function About() {
                                     Subscribe to receive emails on new product arrivals & special offers
                                 </p>
 
-                                
+
                                 <div className="flex flex-col md:flex-row items-center mt-6 w-full max-w-xl gap-4">
                                     <input
                                         type="email"
