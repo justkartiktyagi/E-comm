@@ -9,13 +9,12 @@ function Contact_Us() {
                     <p className="text-5xl text-white font-bold font-ubuntu ">Contact Us</p>
                 </div>
                 <div className="relative w-full min-h-screen">
-                    {/* Background Split (Blue Top, White Bottom) */}
+
                     <div className="absolute top-0 left-0 w-full h-1/2 bg-gray-400 z-0"></div>
                     <div className="absolute bottom-0 left-0 w-full h-1/2 bg-white z-0"></div>
 
-                    {/* Content Layer */}
                     <div className="relative z-10 flex flex-col md:flex-row min-h-screen">
-                        {/* Left: Contact Info */}
+
                         <div className="md:w-1/2 p-10 text-black flex flex-col justify-center">
                             <h2 className="text-3xl font-bold mb-4">Get In Touch</h2>
                             <p className="mb-6">
@@ -36,7 +35,6 @@ function Contact_Us() {
                                 </div>
                             </div>
 
-                            {/* Social Icons */}
                             <div className="flex gap-4 mt-8">
                                 <a href="#"><i className="fab fa-facebook text-black text-xl"></i></a>
                                 <a href="#"><i className="fab fa-instagram text-black text-xl"></i></a>
@@ -46,7 +44,6 @@ function Contact_Us() {
                             </div>
                         </div>
 
-                        {/* Right: Form Box Floating Across Background */}
                         <div className="md:w-1/2 flex items-center justify-center p-6">
                             <div className="w-full max-w-md bg-white p-8 rounded-xl shadow-2xl z-10">
                                 <h3 className="text-xl font-semibold mb-6">Send Us Message</h3>

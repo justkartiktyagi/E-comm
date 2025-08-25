@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import '/src/index.css'
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import { useCart } from "./Context";
 
@@ -10,6 +10,11 @@ function Navbar() {
     const { cart } = useCart();
 
     const [menuOpen, setMenuOpen] = useState(false);
+    const location = useLocation()
+
+    useEffect(() => {
+        setMenuOpen(false)
+    }, [location])
 
 
 

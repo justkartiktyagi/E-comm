@@ -13,6 +13,7 @@ import News from './Pages/news.jsx';
 import Contact_Us from './Pages/contact_us.jsx';
 import Cart from './Pages/cart.jsx';
 import Product_detail from './Pages/product_details.jsx'
+import ScrollToTop from './Pages/scroll_to_top.jsx';
 function App() {
 
 
@@ -20,6 +21,7 @@ function App() {
     <>
 
       <Navbar />
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path='/product_list' element={<ProductList />} />
@@ -29,8 +31,9 @@ function App() {
         <Route path='/news' element={<News />} />
         <Route path='/contact_us' element={<Contact_Us />} />
         <Route path='/cart' element={<Cart />} />
-        <Route path='/product_details' element={<Product_detail/>}/>
+        <Route path="/product/:id" element={<Product_detail />} />
       </Routes>
+
       <Footer />
 
     </>

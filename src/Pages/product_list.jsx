@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Product_Card from "./components/product_card";
 import axios from "axios";
 
+
 function ProductList() {
     const [Products, setProducts] = useState([]);
     const [Loading, setLoading] = useState(true);
@@ -11,11 +12,10 @@ function ProductList() {
 
     // Fetch products
     useEffect(() => {
-        axios
-            .get("https://fakestoreapi.com/products/")
+        axios.get("https://fakestoreapi.com/products/")
             .then((res) => {
                 setProducts(res.data);
-
+                console.log(res)
                 const filter = res.data.filter((p) => p.price < 20).slice(0, 6);
                 setFiltered_Products(filter);
 
@@ -87,11 +87,11 @@ function ProductList() {
                             className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-12">
                             {filteredProducts.length > 0 ? (
                                 filteredProducts.map((product) => (
-                                    <Product_Card key={product.id} product={product} />))) 
-                                    : 
-                                    (<p className="col-span-full text-center text-gray-500">
+                                    <Product_Card key={product.id} product={product} />)))
+                                :
+                                (<p className="col-span-full text-center text-gray-500">
                                     No products found
-                                    </p>)   
+                                </p>)
                             }
                         </div>
                     </main>

@@ -6,13 +6,11 @@ function Cart() {
 
     return (
         <div>
-            {/* Header */}
             <div className="flex flex-col pt-[200px] pb-[120px] items-center justify-center w-full bg-gray-900">
                 <p className="text-white font-ubuntu">Home / Cart</p>
                 <p className="text-5xl text-white font-bold font-ubuntu">Cart</p>
             </div>
 
-            {/* Cart Content */}
             <div className="bg-white w-full py-10">
                 <div className="container mx-auto grid grid-cols-1 lg:grid-cols-[3fr_1fr] gap-6">
                     

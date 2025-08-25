@@ -125,7 +125,6 @@ function Home() {
 
     return (
         <>
-            {/* max-w-screen-xl it uses bascally like a container max wisth 1280px */}
             <div>
                 <div className="relative w-full max-w-screen-xl pt-[110px] mx-auto">
                     <img
@@ -161,7 +160,7 @@ function Home() {
                 </div>
                 <div className="bg-white w-full py-20">
                     <div className="container mx-auto px-4 sm:px-8">
- 
+
                         <div className=" text-center">
                             <p className="font-ubuntu font-bold text-sm sm:text-base">Checkout latest products</p>
                             <p className="text-4xl sm:text-5xl lg:text-6xl font-ubuntu text-black">New Arrivals</p>
@@ -190,8 +189,9 @@ function Home() {
                                                     id: catalog.id,
                                                     name: catalog.caption1,
                                                     price: catalog.price || 0,
-                                                    image: catalog.src,})
-                                                    }>ADD TO CART
+                                                    image: catalog.src,
+                                                })
+                                            }>ADD TO CART
                                         </button>
                                     </div>
                                 </div>
@@ -207,7 +207,6 @@ function Home() {
                                 <img src={image_2.src} alt={image_2.caption1} className="w-full h-full object-cover"
                                 />
 
-                                {/* Overlay Caption */}
                                 <div className="absolute bottom-0 w-full lg:w-70 bg-black bg-opacity-80 text-white p-4">
                                     <p className="text-sm font-ubuntu">{image_2.caption1}</p>
                                     <h2 className="text-2xl sm:text-3xl font-bold font-ubuntu">{image_2.caption2}</h2>
@@ -220,7 +219,6 @@ function Home() {
                     <div className="w-full bg-white py-20">
                         <div className="container mx-auto flex flex-col lg:flex-row items-center justify-center px-4 lg:px-0 relative">
 
-                            {/* Black Box */}
                             <div className="bg-black text-white p-10 w-full lg:w-1/3 z-10 relative font-ubuntu">
                                 <div className="bg-transparent p-10 text-left">
                                     <h2 className="text-3xl lg:text-4xl font-bold mb-6">New Cloth <br />Technologies</h2>
@@ -233,7 +231,6 @@ function Home() {
                                 </div>
                             </div>
 
-                            {/* Image with responsive overlap */}
                             <div className="w-full lg:w-1/2 -ml-0 lg:-ml-[200px] mt-10 lg:mt-0 z-0">
                                 <img
                                     src="../../../public/Lozan.jpg"
@@ -248,13 +245,13 @@ function Home() {
                 </div>
                 <div className="bg-white w-full pt-1">
                     <h2 className="text-center font-ubuntu text-xl text-black pt-10">Check out popular products</h2>
-                    <h1 className="text-center font-ubuntu text-5xl text-black pt-10">Popular Products</h1>
+                    <h1 className="text-center font-ubuntu text-5xl lg:px-0 px-1 text-black pt-10">Popular Products</h1>
 
                     <div className="container mx-auto gap-8 content-center justify-center pt-10 lg:pt-10 flex flex-wrap grid-cols-3">
                         {images_3.map((image3) => (
                             <div key={image3.id} className="max-w-md justify-center content-center">
                                 <a href="#">
-                                    <img className="h-80 w-full px-2" src={image3.src} alt="" />
+                                    <img className="h-50 w-full px-5" src={image3.src} alt="" />
                                 </a>
                                 <div className="p-5">
                                     <a href="#">
@@ -272,14 +269,13 @@ function Home() {
                 <div className="bg-white w-full py-16">
                     <div className="container mx-auto px-4">
                         <div className="relative w-full max-w-8xl mx-auto overflow-hidden">
-                            {/* Background Image */}
+
                             <img
                                 className="w-full h-100   object-cover"
                                 src="../../../public/pexels-christian-heitz-285904-842711.jpg"
                                 alt="newsletter"
                             />
 
-                            {/* Overlay Content */}
                             <div className="absolute inset-0 bg-opacity-50 flex flex-col items-center justify-center px-4 text-center">
                                 <h2 className="text-3xl md:text-5xl font-bold text-white font-ubuntu">
                                     Newsletter Updates
@@ -288,7 +284,7 @@ function Home() {
                                     Subscribe to receive emails on new product arrivals & special offers
                                 </p>
 
-                                {/* Input + Button */}
+        
                                 <div className="flex flex-col md:flex-row items-center mt-6 w-full max-w-xl gap-4">
                                     <input
                                         type="email"
