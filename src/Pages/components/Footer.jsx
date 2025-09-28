@@ -49,7 +49,7 @@ function Footer() {
 
         <div className="text-center mt-16">
           <p className="text-4xl font-bold font-ubuntu text-black mb-4">DripCode</p>
-          <p className="font-ubuntu text-black pb-10">© 2025 - Mantiss Codes</p>
+          <p className="font-ubuntu text-black pb-10">© 2025 - Kartik Tyagi</p>
         </div>
       </div>
     </div>
